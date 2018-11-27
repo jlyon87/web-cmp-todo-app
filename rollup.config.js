@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
-import html from 'rollup-plugin-template-html'
+import generateHtml from 'rollup-plugin-template-html'
+import template from 'rollup-plugin-html'
 import { uglify } from 'rollup-plugin-uglify'
 
 // `npm run build` -> `production` is true
@@ -17,9 +18,12 @@ export default {
   plugins: [
     resolve(), // tells Rollup how to find date-fns in node_modules
     commonjs(), // converts date-fns to ES modules
-    html({
+    generateHtml({
       template: 'src/index.html',
       filename: 'index.html'
+    }),
+    template({
+      include: 'src/components/*.html'
     }),
     production && uglify() // minify, but only in production
   ]
