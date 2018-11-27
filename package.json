@@ -17,6 +17,7 @@
     "rollup": "^0.67.3",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-template-html": "0.0.3",
     "rollup-plugin-uglify": "^6.0.0",
     "serve": "^10.1.1",
     "standard": "^12.0.1"

@@ -5,10 +5,10 @@ const scope = {
 }
 
 export default class TodoApp extends HTMLElement {
-  constructor() {
+  constructor () {
     super()
 
-    const shadowRoot = this.attachShadow({mode: 'closed'})
+    const shadowRoot = this.attachShadow({ mode: 'closed' })
     shadowRoot.innerHTML = template(scope)
   }
 }
