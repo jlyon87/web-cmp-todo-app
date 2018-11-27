@@ -1,7 +1,7 @@
 import template from './template'
 
 const scope = {
-  message: 'sup'
+  title: 'ToDo App'
 }
 
 export default class TodoApp extends HTMLElement {
