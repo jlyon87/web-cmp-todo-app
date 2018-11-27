@@ -1,2 +1,2 @@
-import TodoApp from './js/todo-app'
+import TodoApp from './components/todo-app'
 customElements.define('todo-app', TodoApp)
