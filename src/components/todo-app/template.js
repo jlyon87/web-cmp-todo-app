@@ -1,4 +1,6 @@
 import template from './template.html'
-export default (scope) => {
-  return template
+import render from '../../plugins/renderer.js'
+
+export default (props) => {
+  return render(props, template)
 }

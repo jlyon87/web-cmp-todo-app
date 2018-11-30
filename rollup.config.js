@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import generateHtml from 'rollup-plugin-template-html'
-import template from 'rollup-plugin-html'
+import htmlAsString from 'rollup-plugin-html'
 import { uglify } from 'rollup-plugin-uglify'
 
 // `npm run build` -> `production` is true
@@ -22,8 +22,8 @@ export default {
       template: 'src/index.html',
       filename: 'index.html'
     }),
-    template({
-      include: 'src/components/*.html'
+    htmlAsString({
+      include: 'src/components/**/*.html'
     }),
     production && uglify() // minify, but only in production
   ]
